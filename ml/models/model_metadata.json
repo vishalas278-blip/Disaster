@@ -1,0 +1,134 @@
+{
+  "model_name": "StormGuard Convective Genesis Gradient-Boosted Ensemble",
+  "algorithm": "Gradient-Boosted Decision Ensemble (35 Estimators, Depth 4)",
+  "version": "1.0.0-prototype",
+  "target": "convective_genesis (Initiation within 15-60 min)",
+  "features": [
+    "cape_j_kg",
+    "cin_j_kg",
+    "lifted_index_k",
+    "k_index",
+    "precipitable_water_mm",
+    "surface_temp_c",
+    "relative_humidity_pct",
+    "dew_point_depression_c",
+    "pressure_tendency_hpa_3h",
+    "updraft_helicity_m2_s2",
+    "vertical_velocity_ms",
+    "wind_shear_knots",
+    "reflectivity_gradient_dbz_10m",
+    "cloud_top_cooling_c_15m"
+  ],
+  "feature_importances": {
+    "reflectivity_gradient_dbz_10m": 0.2019,
+    "cin_j_kg": 0.179,
+    "cape_j_kg": 0.1771,
+    "vertical_velocity_ms": 0.1257,
+    "pressure_tendency_hpa_3h": 0.08,
+    "lifted_index_k": 0.059,
+    "wind_shear_knots": 0.0533,
+    "k_index": 0.0305,
+    "cloud_top_cooling_c_15m": 0.0305,
+    "relative_humidity_pct": 0.0267,
+    "dew_point_depression_c": 0.0229,
+    "updraft_helicity_m2_s2": 0.0057,
+    "precipitable_water_mm": 0.0038,
+    "surface_temp_c": 0.0038
+  },
+  "feature_stats": {
+    "cape_j_kg": {
+      "mean": 1924.585375,
+      "std": 990.9935622185492,
+      "min": 150.0,
+      "max": 4800.0
+    },
+    "cin_j_kg": {
+      "mean": 45.505725,
+      "std": 44.42494456636243,
+      "min": 5.0,
+      "max": 280.0
+    },
+    "lifted_index_k": {
+      "mean": -1.86685,
+      "std": 3.2662960792769535,
+      "min": -11.0,
+      "max": 7.0
+    },
+    "k_index": {
+      "mean": 31.664125000000002,
+      "std": 5.703440232383873,
+      "min": 14.4,
+      "max": 46.0
+    },
+    "precipitable_water_mm": {
+      "mean": 47.91239999999999,
+      "std": 11.83170069094042,
+      "min": 18.0,
+      "max": 78.0
+    },
+    "surface_temp_c": {
+      "mean": 32.499900000000004,
+      "std": 4.086628805017652,
+      "min": 21.0,
+      "max": 44.0
+    },
+    "relative_humidity_pct": {
+      "mean": 66.39785,
+      "std": 9.650090433643614,
+      "min": 35.1,
+      "max": 98.0
+    },
+    "dew_point_depression_c": {
+      "mean": 6.716024999999999,
+      "std": 2.097199489646848,
+      "min": 0.4,
+      "max": 13.5
+    },
+    "pressure_tendency_hpa_3h": {
+      "mean": -0.8586800000000001,
+      "std": 1.5677609216969277,
+      "min": -6.0,
+      "max": 3.5
+    },
+    "updraft_helicity_m2_s2": {
+      "mean": 35.060575,
+      "std": 24.423327950330094,
+      "min": 5.0,
+      "max": 149.3
+    },
+    "vertical_velocity_ms": {
+      "mean": 23.14705,
+      "std": 7.317465496843836,
+      "min": 4.2,
+      "max": 35.0
+    },
+    "wind_shear_knots": {
+      "mean": 23.958425,
+      "std": 12.961913208295101,
+      "min": 6.0,
+      "max": 58.0
+    },
+    "reflectivity_gradient_dbz_10m": {
+      "mean": 6.74175,
+      "std": 4.320335859340105,
+      "min": -4.0,
+      "max": 20.2
+    },
+    "cloud_top_cooling_c_15m": {
+      "mean": -11.947625,
+      "std": 3.88834596703727,
+      "min": -22.0,
+      "max": 1.0
+    }
+  },
+  "metrics": {
+    "accuracy": 0.88125,
+    "roc_auc": 0.9262281569403231,
+    "f1_score": 0.93361285814116,
+    "precision": 0.8824306472919419,
+    "recall": 0.9910979228486647
+  },
+  "training_samples": 3200,
+  "test_samples": 800,
+  "scientific_note": "Calibrated Prototype Model for SIH 2026 Demonstration. Scalable to 3D Spatiotemporal ConvLSTM / Graph Neural Networks with Radar & INSAT inputs in full production."
+}
